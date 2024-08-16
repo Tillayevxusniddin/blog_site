@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Navbar{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+
+        <img src="{% static 'image/kisspng-computer-icons-blogger-blog-5abbc928c96994.914847481522256168825.jpg' %}" alt="Logo" />
+
+<!--        <img src="{% static 'image/png-clipart-blog-computer-icons-graphics-favicon-internet-blogs-text-content-marketing.png' %}" alt="Logo" />-->
+<!--        <img src="{% static 'image/png-transparent-computer-icons-blogger-google-blog-search-others-text-logo-share-icon-thumbnail.png' %}" alt="Logo" />-->
+        <i class="fa-solid fa-bars"></i>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>

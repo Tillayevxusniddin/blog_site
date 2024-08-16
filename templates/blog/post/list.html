@@ -1,0 +1,24 @@
+{% extends "blog/base.html"%}
+{% block title %}Blog-Uz{% endblock %}
+
+
+{% block content %}
+{% for post in posts %}
+<article>
+<!--    <img src="1.png" />-->
+    <div>
+        <h2>
+            <a href="{{ post.get_absolute_url }}">
+                {{ post.title }}
+            </a>
+        </h2>
+        <name>Published {{ post.publish }} by {{ post.author }}</name>
+        <p>
+            {{ post.body|truncatewords:30|linebreaks }}
+        </p>
+    </div>
+
+</article>
+
+{% endfor %}
+{% endblock %}
